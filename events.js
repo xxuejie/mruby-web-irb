@@ -20,7 +20,7 @@
       load_string_func(mrb, editor.getValue());
 
       if (!printed) {
-        print('<small><i>(no output)</i></small>');
+        window.Module['print']('<small><i>(no output)</i></small>');
       }
 
       var element = $("#output");
