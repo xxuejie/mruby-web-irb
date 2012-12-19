@@ -26,6 +26,12 @@
       var element = $("#output");
       if (!element) return; // perhaps during startup
       element.html(lines.join('<br>') + '<hr>' + element.html());
+
+      if ($('#clear-check').is(':checked')) {
+        // clears current mrb states
+        _driver_close(mrb);
+        mrb = _driver_open();
+      }
     });
 
     window.onbeforeunload = function () {
