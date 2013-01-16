@@ -8,7 +8,7 @@
   };
 
   $(document).ready(function() {
-    mrb = _driver_open();
+    mrb = Module['_driver_open']();
     load_string_func = Module.cwrap("driver_execute_string",
                                     "number",
                                     ["number", "string"]);
@@ -29,13 +29,13 @@
 
       if ($('#clear-check').is(':checked')) {
         // clears current mrb states
-        _driver_close(mrb);
-        mrb = _driver_open();
+        Module['_driver_close'](mrb);
+        mrb = Module['_driver_open']();
       }
     });
 
     window.onbeforeunload = function () {
-      _driver_close(mrb);
+      Module['_driver_close'](mrb);
     }
   });
 }());

@@ -26,7 +26,7 @@ EMCC_INCLUDES="-I$WEBRUBY_ROOT/modules/mruby/include"
 
 # build webruby
 cd $WEBRUBY_ROOT
-git submodule init && git submodule update && make
+git submodule init && git submodule update && rake libmruby
 if [ $? -ne 0 ]; then
     echo "Error occurs when building webruby project, exit"
     exit 1
@@ -40,17 +40,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# build mruby.js
-$EMCC $EMCC_FLAGS -o $SCRIPT_ROOT/mruby.js $SCRIPT_ROOT/driver.o $WEBRUBY_ROOT/modules/mruby/lib/libmruby.a
+# build mruby.js(O2 will invoke closure compiler)
+$EMCC $EMCC_FLAGS -o $SCRIPT_ROOT/mruby.js $SCRIPT_ROOT/driver.o $WEBRUBY_ROOT/modules/mruby/build/emscripten/lib/libmruby.a -s EXPORTED_FUNCTIONS="['_driver_execute_string', '_driver_open', '_driver_close']" -O2
 if [ $? -ne 0 ]; then
     echo "Error occurs when building mruby.js, exit"
-    exit 1
-fi
-
-# invoke closure compiler
-java -Xmx4g -jar $CLOSURE_COMPILER --compilation_level SIMPLE_OPTIMIZATIONS --js $SCRIPT_ROOT/mruby.js --js_output_file $SCRIPT_ROOT/mruby.opt.js
-if [ $? -ne 0 ]; then
-    echo "Error occurs when optimizing mruby.js, exit"
     exit 1
 fi
 
