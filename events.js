@@ -1,5 +1,5 @@
 (function () {
-  var lines = [], printed = false, mrb, load_string_func;
+  var lines = [], printed = false, webruby, load_string_func;
 
   window.Module = {};
   window.Module['print'] = function (x) {
@@ -8,16 +8,13 @@
   };
 
   $(document).ready(function() {
-    mrb = Module['_driver_open']();
-    load_string_func = Module.cwrap("driver_execute_string",
-                                    "number",
-                                    ["number", "string"]);
+    webruby = new WEBRUBY({print_level: 2});
 
     $("#submit-button").click(function() {
       lines = [];
       printed = false;
 
-      load_string_func(mrb, editor.getValue());
+      webruby.run_source(editor.getValue());
 
       if (!printed) {
         window.Module['print']('<small><i>(no output)</i></small>');
@@ -29,13 +26,17 @@
 
       if ($('#clear-check').is(':checked')) {
         // clears current mrb states
-        Module['_driver_close'](mrb);
-        mrb = Module['_driver_open']();
+        webruby.close();
+        webruby = new WEBRUBY({print_level: 2});
+      }
+
+      if ($('#clear-input').is(':checked')) {
+        editor.setValue('');
       }
     });
 
     window.onbeforeunload = function () {
-      Module['_driver_close'](mrb);
+      webruby.close();
     }
   });
 }());
