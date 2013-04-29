@@ -1,5 +1,12 @@
+var history = [], history_index = 0;
+
 (function () {
-  var lines = [], printed = false, webruby, load_string_func, history = [], history_index = 0;
+  var lines = [], printed = false, webruby, load_string_func;
+
+  if (localStorage) {
+    history = JSON.parse(localStorage.history || '[]');
+    history_index = history.length;
+  }
 
   var ENTER_KEY = 13;
   var UP_KEY    = 38;
@@ -98,6 +105,10 @@
 
     window.onbeforeunload = function () {
       webruby.close();
+
+      if (localStorage) {
+        localStorage.history = JSON.stringify(history);
+      }
     }
   });
 }());
