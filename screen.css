@@ -88,61 +88,72 @@ input {
 }
 
 /* line 28, screen.sass */
-#shell {
-  font-family: sans-serif;
-  padding: 2px;
+#code-form {
+  float: left;
+  width: 50%;
 }
+
 /* line 32, screen.sass */
+#shell {
+  float: left;
+  width: 50%;
+  font-family: sans-serif;
+}
+/* line 37, screen.sass */
 #shell .prompt {
   color: #66d9ef;
 }
-/* line 35, screen.sass */
+/* line 40, screen.sass */
 #shell .prompt, #shell #output .response span {
   margin-right: 5px;
   display: inline-block;
 }
-/* line 40, screen.sass */
+/* line 45, screen.sass */
 #shell #output .session {
   color: #e6db74;
 }
-/* line 43, screen.sass */
+/* line 48, screen.sass */
 #shell #output .response span {
   color: #ae81ff;
 }
-/* line 45, screen.sass */
+/* line 50, screen.sass */
 #shell #output .command {
   color: #f8f8f2;
 }
-/* line 49, screen.sass */
+/* line 54, screen.sass */
 #shell #command .prompt, #shell #command input {
   height: 20px;
 }
-/* line 51, screen.sass */
+/* line 56, screen.sass */
 #shell #command .prompt {
   position: absolute;
   line-height: 20px;
 }
-/* line 54, screen.sass */
+/* line 59, screen.sass */
 #shell #command input {
   border: none;
   padding: 0 0 0 25px;
   width: 100%;
 }
-/* line 59, screen.sass */
+/* line 64, screen.sass */
 #shell #command input:focus {
   outline: none;
 }
 
-/* line 62, screen.sass */
+/* line 67, screen.sass */
 #editor-container {
-  margin: 1em 0;
   height: 300px;
-  width: 80%;
+  width: 100%;
 }
 
-/* line 67, screen.sass */
+/* line 71, screen.sass */
 #editor {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+/* line 76, screen.sass */
+#welcome {
+  display: none;
 }
