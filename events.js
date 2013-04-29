@@ -21,6 +21,7 @@ var history = [], history_index = 0;
   $(window).resize(function() {
     var height = $(window).height();
     $('#shell, #editor').height(height + 'px');
+    $('#command input').width((($(window).width()/2)-60));
   });
 
   $(document).ready(function() {
