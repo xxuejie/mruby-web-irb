@@ -21,6 +21,9 @@ var history = [], history_index = 0;
   $(document).ready(function() {
     webruby = new WEBRUBY({print_level: 2});
 
+    var height = $(window).height();
+    $('#shell, #editor').height(height + 'px');
+
     var command = function(source) {
       lines = [];
       printed = false;
