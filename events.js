@@ -36,8 +36,10 @@
       $('#shell input').focus();
     };
 
+    $('#')
+
     $('#shell input').keydown(function(e) {
-      var cmd;
+      var cmd, found = true;
 
       switch (e.which) {
         case UP_KEY:
@@ -69,7 +71,13 @@
             $(this).val('');
           }
           break;
+
+        default:
+          found = false;
+          break;
       }
+
+      if (found) e.preventDefault();
     });
 
     $("#submit-button").click(function() {
