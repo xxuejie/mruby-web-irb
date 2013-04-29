@@ -1,5 +1,5 @@
 (function () {
-  var lines = [], printed = false, webruby, load_string_func;
+  var lines = [], printed = false, webruby, load_string_func, history = [], history_index = 0;
 
   var ENTER_KEY = 13;
   var UP_KEY    = 38;
@@ -18,6 +18,11 @@
       lines = [];
       printed = false;
 
+      if (source != history[history_index-1])
+        history.push(source);
+
+      history_index = history.length;
+
       webruby.run_source(source);
 
       if (!printed) {
@@ -32,7 +37,31 @@
     };
 
     $('#shell input').keydown(function(e) {
+      var cmd;
+
       switch (e.which) {
+        case UP_KEY:
+          history_index--;
+          cmd = history[history_index];
+
+          if (history_index < 0)
+            history_index = 0;
+          else
+            $('#shell input').val(cmd);
+
+          break;
+
+        case DOWN_KEY:
+          history_index++;
+          cmd = history[history_index];
+
+          if (history_index >= history.length)
+            history_index = history.length-1;
+          else
+            $('#shell input').val(cmd);
+
+          break;
+
         case ENTER_KEY:
           var val = $(this).val().trim();
           if (val) {
