@@ -30,7 +30,7 @@ var history = [], history_index = 0;
 
       history_index = history.length;
 
-      webruby.run_source('MrubyJs.window.instance_eval { ' + source + ' }');
+      webruby.run_source(source);
 
       if (!printed) {
         window.Module['print']('nil');
