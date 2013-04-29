@@ -67,94 +67,96 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body, input {
   background: #272822;
   color: #f8f8f2;
+  overflow: hidden;
 }
 
-/* line 16, screen.sass */
+/* line 17, screen.sass */
 body {
   font-family: monospace;
   font-size: 13px;
   line-height: 16px;
 }
 
-/* line 21, screen.sass */
+/* line 22, screen.sass */
 a {
   color: #ae81ff;
 }
 
-/* line 24, screen.sass */
+/* line 25, screen.sass */
 input {
   font-size: inherit;
   line-height: inherit;
   font-family: monospace !important;
 }
 
-/* line 29, screen.sass */
+/* line 30, screen.sass */
 #code-form {
   float: left;
   width: 50%;
 }
 
-/* line 33, screen.sass */
+/* line 34, screen.sass */
 #shell {
   float: left;
-  width: 50%;
   font-family: monospace;
+  width: 50%;
+  overflow: scroll;
 }
-/* line 38, screen.sass */
+/* line 40, screen.sass */
 #shell .prompt {
   color: #66d9ef;
 }
-/* line 41, screen.sass */
+/* line 43, screen.sass */
 #shell .prompt, #shell #output .response span {
   margin-right: 5px;
   display: inline-block;
 }
-/* line 46, screen.sass */
+/* line 48, screen.sass */
 #shell #output .session {
   color: #e6db74;
 }
-/* line 49, screen.sass */
+/* line 51, screen.sass */
 #shell #output .response span {
   color: #ae81ff;
 }
-/* line 51, screen.sass */
+/* line 53, screen.sass */
 #shell #output .command {
   color: #f8f8f2;
 }
-/* line 55, screen.sass */
+/* line 57, screen.sass */
 #shell #command .prompt, #shell #command input {
   height: 20px;
 }
-/* line 57, screen.sass */
+/* line 59, screen.sass */
 #shell #command .prompt {
   position: absolute;
   line-height: 20px;
 }
-/* line 60, screen.sass */
+/* line 62, screen.sass */
 #shell #command input {
   border: none;
   padding: 0 0 0 21px;
   width: 100%;
 }
-/* line 65, screen.sass */
+/* line 67, screen.sass */
 #shell #command input:focus {
   outline: none;
 }
 
-/* line 68, screen.sass */
+/* line 70, screen.sass */
 #editor-container {
   height: 300px;
   width: 100%;
 }
 
-/* line 72, screen.sass */
+/* line 74, screen.sass */
 #editor {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-/* line 77, screen.sass */
+/* line 79, screen.sass */
 #welcome {
   display: none;
 }

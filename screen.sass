@@ -12,6 +12,7 @@ $response-color: $alternate-color
 body, input
   background: $background-color
   color: $font-color
+  overflow: hidden
 
 body
   font-family: monospace
@@ -32,8 +33,9 @@ input
 
 #shell
   float: left
-  width: 50%
   font-family: monospace
+  width: 50%
+  overflow: scroll
 
   .prompt
     color: $prompt-color
