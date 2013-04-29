@@ -10,43 +10,45 @@
   <script src="webruby.js"></script>
 </head>
 <body>
-  <a href="https://github.com/xxuejie/mruby-web-irb"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-  <div id="shell">
-    <div id="output">
+  <a href="https://github.com/xxuejie/mruby-web-irb"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:10;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  <div id="welcome">
+    <p>
+      This is the <a href="https://github.com/mruby/mruby">mruby</a> interpreter, compiled from C to JavaScript using <a href="http://emscripten.org">Emscripten</a>,
+      running in your browser (without any plugins).
+    </p>
+    <p>
+      <ul>
+        <li>The skeleton of this file is take from <a href="https://github.com/kripken/emscripten/blob/master/demos/lua.html">here</a>, a Lua interpreter running in a browser.</li>
+        <li>The source code is at <a href="https://github.com/xxuejie/mruby-web-irb">https://github.com/xxuejie/mruby-web-irb</a>.</li>
+        <li>Also feel free to check out my <a href="/">blog</a>!</li>
+      </ul>
+    </p>
+  </div>
+  <div id="container">
+    <div id="shell">
+      <div id="output">
+      </div>
+      <div id="command">
+        <span class="prompt">&gt;&gt;</span>
+        <input autofocus="autofocus"/>
+      </div>
     </div>
-    <div id="command">
-      <span class="prompt">&gt;&gt;</span>
-      <input autofocus="autofocus"/>
+    <div id="code-form">
+      <div id="editor-container">
+        <div id="editor">5.times { puts "Ruby is awesome!" }</div>
+      </div>
     </div>
   </div>
-  <p>
-    This is the <a href="https://github.com/mruby/mruby">mruby</a> interpreter, compiled from C to JavaScript using <a href="http://emscripten.org">Emscripten</a>,
-    running in your browser (without any plugins).
-  </p>
-  <p>
-    <ul>
-      <li>The skeleton of this file is take from <a href="https://github.com/kripken/emscripten/blob/master/demos/lua.html">here</a>, a Lua interpreter running in a browser.</li>
-      <li>The source code is at <a href="https://github.com/xxuejie/mruby-web-irb">https://github.com/xxuejie/mruby-web-irb</a>.</li>
-      <li>Also feel free to check out my <a href="/">blog</a>!</li>
-    </ul>
-  </p>
-  <hr>
-  <div id="code-form">
-    <b>Enter some mruby code</b>:
-    <a id="submit-button" href="#">Submit</a><br><br>
-    <input id="clear-check" type="checkbox">Click this if you want to start a new irb(clear all current states) after submitting your code.</input>
-    <div id="editor-container">
-      <div id="editor">5.times { puts "Ruby is awesome!" }</div>
-    </div>
-  </div>
+  <footer>
+    <a id="submit-button" href="#">Run</a>
+    <input id="clear-check" type="checkbox">Initialize after each run</input>
+  </footer>
   <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/ruby");
   </script>
-  <hr>
-  <div id="output" style="font-family: Courier New,Courier,monospace;"></div>
 </body>
 </html>
 
