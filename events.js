@@ -34,8 +34,11 @@
     $('#shell input').keydown(function(e) {
       switch (e.which) {
         case ENTER_KEY:
-          command($(this).val());
-          $(this).val('');
+          var val = $(this).val().trim();
+          if (val) {
+            command(val);
+            $(this).val('');
+          }
           break;
       }
     });
