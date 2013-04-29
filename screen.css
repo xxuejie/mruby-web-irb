@@ -129,7 +129,7 @@ input {
 }
 /* line 59, screen.sass */
 #shell #command .prompt {
-  position: absolute;
+  float: left;
   line-height: 20px;
 }
 /* line 62, screen.sass */
