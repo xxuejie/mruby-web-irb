@@ -18,16 +18,20 @@ var history = [], history_index = 0;
     printed = true;
   };
 
-  $(window).resize(function() {
-    var height = $(window).height();
-    $('#shell, #editor').height(height + 'px');
-    $('#command input').width((($(window).width()/2)-60));
-  });
-
   $(document).ready(function() {
-    webruby = new WEBRUBY({print_level: 2});
+    $(window).resize(function() {
+      var height = $(window).height();
+      $('#shell, #editor').height(height + 'px');
+      $('#command input').width((($(window).width()/2)-60));
+    });
+
+    $('#shell').click(function() {
+      $('input').focus();
+    });
 
     $(window).trigger('resize');
+
+    webruby = new WEBRUBY({print_level: 2});
 
     var command = function(source) {
       lines = [];
