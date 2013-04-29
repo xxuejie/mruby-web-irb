@@ -72,88 +72,87 @@ body, input {
 /* line 16, screen.sass */
 body {
   font-family: sans-serif;
-  font-size: 17px;
-  line-height: 20px;
-  padding: 4px;
+  font-size: 13px;
+  line-height: 16px;
 }
 
-/* line 22, screen.sass */
+/* line 21, screen.sass */
 a {
   color: #ae81ff;
 }
 
-/* line 25, screen.sass */
+/* line 24, screen.sass */
 input {
   font-size: inherit;
 }
 
-/* line 28, screen.sass */
+/* line 27, screen.sass */
 #code-form {
   float: left;
   width: 50%;
 }
 
-/* line 32, screen.sass */
+/* line 31, screen.sass */
 #shell {
   float: left;
   width: 50%;
   font-family: sans-serif;
 }
-/* line 37, screen.sass */
+/* line 36, screen.sass */
 #shell .prompt {
   color: #66d9ef;
 }
-/* line 40, screen.sass */
+/* line 39, screen.sass */
 #shell .prompt, #shell #output .response span {
   margin-right: 5px;
   display: inline-block;
 }
-/* line 45, screen.sass */
+/* line 44, screen.sass */
 #shell #output .session {
   color: #e6db74;
 }
-/* line 48, screen.sass */
+/* line 47, screen.sass */
 #shell #output .response span {
   color: #ae81ff;
 }
-/* line 50, screen.sass */
+/* line 49, screen.sass */
 #shell #output .command {
   color: #f8f8f2;
 }
-/* line 54, screen.sass */
+/* line 53, screen.sass */
 #shell #command .prompt, #shell #command input {
   height: 20px;
 }
-/* line 56, screen.sass */
+/* line 55, screen.sass */
 #shell #command .prompt {
   position: absolute;
   line-height: 20px;
 }
-/* line 59, screen.sass */
+/* line 58, screen.sass */
 #shell #command input {
   border: none;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 21px;
   width: 100%;
 }
-/* line 64, screen.sass */
+/* line 63, screen.sass */
 #shell #command input:focus {
   outline: none;
 }
 
-/* line 67, screen.sass */
+/* line 66, screen.sass */
 #editor-container {
   height: 300px;
   width: 100%;
 }
 
-/* line 71, screen.sass */
+/* line 70, screen.sass */
 #editor {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-/* line 76, screen.sass */
+/* line 75, screen.sass */
 #welcome {
   display: none;
 }
