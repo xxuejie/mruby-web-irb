@@ -31,7 +31,7 @@
       $('#shell input').focus();
     };
 
-    $('#shell input').keyup(function(e) {
+    $('#shell input').keydown(function(e) {
       switch (e.which) {
         case ENTER_KEY:
           command($(this).val());
