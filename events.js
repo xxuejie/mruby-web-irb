@@ -75,6 +75,7 @@
             command(val);
             $(this).val('');
           }
+          $(this).focus();
           break;
 
         default:
