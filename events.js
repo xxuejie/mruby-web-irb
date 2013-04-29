@@ -32,13 +32,13 @@
       var element = $("#output");
       if (!element) return; // perhaps during startup
       var value = lines.slice(-1)[0];
-      element.append('<div class="session"><div class="command"><span class="prompt">&gt;&gt;</span>' + source + '</div><div class="response">' + lines.slice(0, -1).join('<br>') + '<span>=&gt;</span>' + value + '</div></div>');
-      $('#shell input').focus();
+      element.append('<div class="session"><div class="command"><span class="prompt">&gt;&gt;</span>' + source + '</div><div class="response">' + lines.slice(0, -1).join('<br>') + (lines.length > 1 ? '<br>' : '') + '<span>=&gt;</span>' + value + '</div></div>');
     };
 
     $('#editor-container').keydown(function(e) {
       if (e.which == ENTER_KEY && e.shiftKey) {
         $('#submit-button').trigger('click');
+        $(this).focus();
         e.preventDefault();
       }
     });
