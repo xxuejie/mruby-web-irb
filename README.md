@@ -11,3 +11,13 @@ A live demo of this project is at [http://qiezi.me/projects/mruby-web-irb/mruby.
 2. Copy the generated `webruby.js` file to current folder(and override existing file).
 
 3. Now you are good to go!
+
+# How to regenerate the stylesheets
+
+First, you'll need compass:
+
+  > bundle install
+
+Then you can monitor the stylesheets for changes with:
+
+  > compass watch
