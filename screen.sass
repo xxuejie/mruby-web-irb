@@ -1,0 +1,60 @@
+@import "compass/reset"
+
+$background-color: #272822
+$font-color: #F8F8F2
+$font-size: 17px
+$prompt-color: #66D9EF
+$highlight-color: #AE81FF
+$alternate-color: #E6DB74
+$response-label-color: $highlight-color
+$response-color: $alternate-color
+
+body, input
+  background: $background-color
+  color: $font-color
+
+body
+  font-family: sans-serif
+  font-size: $font-size
+  line-height: $font-size+3px
+  padding: 4px
+
+a
+  color: $highlight-color
+
+input
+  font-size: inherit
+
+#shell
+  font-family: sans-serif
+  padding: 2px
+
+  .prompt
+    color: $prompt-color
+
+  .prompt, #output .response span
+    margin-right: 5px
+    display: inline-block
+
+  #output
+    .session
+      color: $response-color
+    .response
+      span
+        color: $response-label-color
+    .command
+      color: $font-color
+
+  #command
+    .prompt, input
+      height: 20px
+    .prompt
+      position: absolute
+      line-height: 20px
+    input
+      border: none
+      padding: 0 0 0 25px
+      width: 100%
+
+      &:focus
+        outline: none

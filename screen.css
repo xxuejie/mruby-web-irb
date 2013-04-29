@@ -1,0 +1,134 @@
+/* line 17, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, screen.sass */
+body, input {
+  background: #272822;
+  color: #f8f8f2;
+}
+
+/* line 16, screen.sass */
+body {
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 4px;
+}
+
+/* line 22, screen.sass */
+a {
+  color: #ae81ff;
+}
+
+/* line 25, screen.sass */
+input {
+  font-size: inherit;
+}
+
+/* line 28, screen.sass */
+#shell {
+  font-family: sans-serif;
+  padding: 2px;
+}
+/* line 32, screen.sass */
+#shell .prompt {
+  color: #66d9ef;
+}
+/* line 35, screen.sass */
+#shell .prompt, #shell #output .response span {
+  margin-right: 5px;
+  display: inline-block;
+}
+/* line 40, screen.sass */
+#shell #output .session {
+  color: #e6db74;
+}
+/* line 43, screen.sass */
+#shell #output .response span {
+  color: #ae81ff;
+}
+/* line 45, screen.sass */
+#shell #output .command {
+  color: #f8f8f2;
+}
+/* line 49, screen.sass */
+#shell #command .prompt, #shell #command input {
+  height: 20px;
+}
+/* line 51, screen.sass */
+#shell #command .prompt {
+  position: absolute;
+  line-height: 20px;
+}
+/* line 54, screen.sass */
+#shell #command input {
+  border: none;
+  padding: 0 0 0 25px;
+  width: 100%;
+}
+/* line 59, screen.sass */
+#shell #command input:focus {
+  outline: none;
+}
