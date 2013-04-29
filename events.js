@@ -36,7 +36,12 @@
       $('#shell input').focus();
     };
 
-    $('#')
+    $('#editor-container').keydown(function(e) {
+      if (e.which == ENTER_KEY && e.shiftKey) {
+        $('#submit-button').trigger('click');
+        e.preventDefault();
+      }
+    });
 
     $('#shell input').keydown(function(e) {
       var cmd, found = true;
