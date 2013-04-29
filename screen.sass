@@ -35,7 +35,8 @@ input
   float: left
   font-family: monospace
   width: 50%
-  overflow: scroll
+  overflow-y: scroll
+  padding-left: 3px
 
   .prompt
     color: $prompt-color
@@ -55,13 +56,12 @@ input
 
   #command
     .prompt, input
-      height: 20px
+      height: 16px
     .prompt
       float: left
-      line-height: 20px
     input
       border: none
-      padding: 0 0 0 21px
+      padding: 0
       width: 100%
 
       &:focus

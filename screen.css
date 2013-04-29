@@ -100,42 +100,42 @@ input {
   float: left;
   font-family: monospace;
   width: 50%;
-  overflow: scroll;
+  overflow-y: scroll;
+  padding-left: 3px;
 }
-/* line 40, screen.sass */
+/* line 41, screen.sass */
 #shell .prompt {
   color: #66d9ef;
 }
-/* line 43, screen.sass */
+/* line 44, screen.sass */
 #shell .prompt, #shell #output .response span {
   margin-right: 5px;
   display: inline-block;
 }
-/* line 48, screen.sass */
+/* line 49, screen.sass */
 #shell #output .session {
   color: #e6db74;
 }
-/* line 51, screen.sass */
+/* line 52, screen.sass */
 #shell #output .response span {
   color: #ae81ff;
 }
-/* line 53, screen.sass */
+/* line 54, screen.sass */
 #shell #output .command {
   color: #f8f8f2;
 }
-/* line 57, screen.sass */
+/* line 58, screen.sass */
 #shell #command .prompt, #shell #command input {
-  height: 20px;
+  height: 16px;
 }
-/* line 59, screen.sass */
+/* line 60, screen.sass */
 #shell #command .prompt {
   float: left;
-  line-height: 20px;
 }
 /* line 62, screen.sass */
 #shell #command input {
   border: none;
-  padding: 0 0 0 21px;
+  padding: 0;
   width: 100%;
 }
 /* line 67, screen.sass */
