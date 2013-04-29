@@ -18,11 +18,15 @@ var history = [], history_index = 0;
     printed = true;
   };
 
+  $(window).resize(function() {
+    var height = $(window).height();
+    $('#shell, #editor').height(height + 'px');
+  });
+
   $(document).ready(function() {
     webruby = new WEBRUBY({print_level: 2});
 
-    var height = $(window).height();
-    $('#shell, #editor').height(height + 'px');
+    $(window).trigger('resize');
 
     var command = function(source) {
       lines = [];
