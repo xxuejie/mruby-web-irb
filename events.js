@@ -51,10 +51,6 @@
         webruby.close();
         webruby = new WEBRUBY({print_level: 2});
       }
-
-      if ($('#clear-input').is(':checked')) {
-        editor.setValue('');
-      }
     });
 
     window.onbeforeunload = function () {
