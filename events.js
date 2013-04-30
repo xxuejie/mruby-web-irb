@@ -20,9 +20,13 @@ var history = [], history_index = 0;
 
   $(document).ready(function() {
     $(window).resize(function() {
-      var height = $(window).height();
-      $('#shell, #editor').height(height + 'px');
-      $('#command input').width((($(window).width()/2)-60));
+      var $window = $(window);
+
+      $('#shell, #editor-container')
+        .height($window.height() + 'px')
+        .width(($window.width()/2)-1 + 'px');
+
+      $('#command input').width(($window.width()/2)-60);
     });
 
     $('#shell').click(function() {

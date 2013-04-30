@@ -33,16 +33,14 @@
         <input autofocus="autofocus"/>
       </div>
     </div>
-    <div id="code-form">
-      <div id="editor-container">
-        <div id="editor">5.times { puts "Ruby is awesome!" }</div>
-      </div>
+    <div id="editor-container">
+      <div id="editor">5.times { puts "Ruby is awesome!" }</div>
     </div>
   </div>
-  <footer>
+  <div id="actions" style="display:none;">
     <a id="submit-button" href="#">Run</a>
     <input id="clear-check" type="checkbox">Initialize after each run</input>
-  </footer>
+  </div>
   <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script>
     var editor = ace.edit("editor");
